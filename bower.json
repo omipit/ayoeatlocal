@@ -1,0 +1,26 @@
+{
+  "name": "jnijstad",
+  "version": "0.0.0",
+  "authors": [
+    "jnijstad<jeffrey@jnijstad.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "*",
+    "jquery": "~2.1.1",
+    "skrollr": "~0.6.26",
+    "jquery-waypoints": "~2.0.5",
+    "modernizr": "~2.8.3"
+  }
+}
