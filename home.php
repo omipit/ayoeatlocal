@@ -78,7 +78,6 @@
 			and start gradually reducing the negative effects on the environment of importing food.
 			<br><br>
 			Explore more and spread the good news, because everyone’s invited!
-			Let’s save the world WITH THE MOST DELICIOUS WAY:
 			</p>
 		</div>
 		<!-- /.solution -->
@@ -117,14 +116,14 @@
 		<div class="right-date">
 			<div class="text">
 				<h1 class="day">
-					FRIDAY
+					Saturday
 				</h1>
 				<!-- /.day -->
 				<div class="date">
-					26 SEPTEMBER 2014
+					27 SEPTEMBER 2014
 				</div>
 				<div class="time">
-					10.00 AM - 5.00 PM
+					10.00 AM - 2.00 PM
 				</div>
 				<!-- /.time -->
 			</div>

@@ -606,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.solution {
-		@include padding-leader(3);
+		@include padding-leader(2);
 		@include padding-trailer(4);
 		width: span(6);
 		@include breakpoint($mobile){
@@ -618,17 +618,12 @@ h1, h2, h3, h4, h5, h6 {
 		text-align: center;
 		color: $green;
 		// background-color: #F9F7EC;
+		.logo {
+			@include margin-trailer(1);
+		}
 
 	}
 }
-
-#solution {
-
-	height: 40%;
-	min-height: 400px;
-
-}
-
 #event {
 	@include padding-leader(12);
 	@include padding-trailer(16);
@@ -768,7 +763,7 @@ h1, h2, h3, h4, h5, h6 {
 				@include opacity(0);
 			}
 			@include breakpoint($mobile){
-				@include opacity(0.7);
+				@include opacity(0.9);
 			}
 			@include transition-duration(0.5s);
 			h2 {
