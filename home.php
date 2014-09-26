@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Language" content="en">
+	<meta name="viewport" content="width=320, initial-scale=0.9, maximum-scale=0.9" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Eat Local - Ayo eat local and save the planet!</title>
 	<link href="https://fontastic.s3.amazonaws.com/hY3cUiBwbtte7Earm4A8p7/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -10,29 +16,42 @@
 
 
 <nav id="main-nav">
-
-		<a href="#intro"><span class='label'>intro</span><span class="dot"></span></a>
-		<a href="#about"><span class='label'>about</span><span class="dot"></span>	</a>
-		<a href="#eat-local"><span class='label'>eat local</span><span class="dot"></span>	</a>
-		<a href="#facts"><span class='label'>facts</span><span class="dot"></span>	</a>
-		<a href="#instagram"><span class='label'>Instagram</span><span class="dot"></span>	</a>
-		<a href="#agritektur"><span class='label'>agritektur</span><span class="dot"></span>	</a>
+		<div class='label'>intro</div>
+		<ul></ul>
 </nav>
 <!-- /#main-nav -->
 
-<section id="intro">
-	<div class="logo">
-		<img src="/images/logo-white.png" alt="">
+<section data-nav-name="intro" class="nav-able" id="intro">
+	<div data-0="opacity:1;transform:translate3d(0px,0px,0px);" data-end="opacity:0;transform:translate3d(0px,900px,0px);" class="intro-slide">
+		<div class="introduce">
+			<h1>It’s your choice to either save or destroy the earth while you’re eating</h1>
+		</div>
+		<!-- /.introduce -->
+		<!-- /.introduce -->
+		<div class="introduce"> 
+			<h1>while you’re eating</h1>
+		</div>
+		<!-- /.introduce-2 -->
+		<div class="logo introduce">
+			<img src="/images/logo-white.png" alt="">
+		</div>
+		<!-- /.logo -->
 	</div>
-	<!-- /.logo -->
-	<div class="go-down">
+	<!-- /.intro-slide -->
+	<a href="#about" class="go-down anchor">
 		<i class="icon-arrow-down-thin"></i>
-	</div>
+	</a>
 	<!-- /.go-down -->
+	<div data-0="opacity:1;transform:translate3d(0px,0px,0px);" data--200-end="opacity:0;transform:translate3d(0px,300px,0px);" class="bg-image owl-carousel">
+		<div class="image cover-2"></div>
+		<div class="image cover"></div>
+		<div class="image cover-3"></div>
+	</div>
+	<!-- /.bg-image -->
 </section>
 <!-- /#intro -->
 
-<section id="about">
+<section data-bg-color="red" data-nav-name="the problem" class="nav-able" id="about">
 	<div class="container">
 		<div class="warning">
 			<span>No, we’re not going to scare you but here’s the fact:</span><br>
@@ -49,13 +68,6 @@
 			</p>
 		</div>
 			<!-- /.explanation -->	
-	</div>
-	<!-- /.container -->
-</section>
-<!-- /#about -->
-
-<section id="solution">
-	<div class="container">
 		<div class="solution">
 			<div class="logo">
 				<img src="/images/eatlocal-type-logo.png" alt="">
@@ -72,10 +84,11 @@
 		<!-- /.solution -->
 	</div>
 	<!-- /.container -->
+	<div data-start="transform:translate3d(0px,0px,0px)" data-end="transform:translate3d(0px, 0,0px);" class="bg-image"></div>
+	<!-- /.bg-image -->
 </section>
-<!-- /#eat-local -->
-
-<section id="event">
+<!-- /#about -->
+<section data-bg-color="yellow" data-nav-name="Join Us" class="nav-able" id="event">
 	<div class="container">
 		<h2 class="section-title">Let’s save the world <br> 
 		WITH THE MOST DELICIOUS WAY:</h2>
@@ -139,11 +152,14 @@
 
 	</div>
 	<!-- /.container -->
+	<!-- data-start="transform:translate3d(0px,0px,0px) scale(1.1);" data-end="transform:translate3d(0px, 0px,0px) scale(1.3);" -->
+	<div class="bg-image"></div>
+	<!-- /.bg-image -->
 </section>
 <!-- /#event -->
 
-<section id="facts">
-	<ul>
+<section data-bg-color="black" data-nav-name="facts" class="nav-able" id="facts">
+	<ul class="clearfix">
 		<li class="producer">
 			<div class="overlay">
 				<h2>WE ARE THE WORLD’S BIGGEST PRODUCER</h2>
@@ -151,10 +167,10 @@
 			</div>
 			<!-- /.overlay -->
 		</li>
-		<li class="variety">
+		<li class="green-house">
 			<div class="overlay">
-				<h2>LOTS OF VARIETY</h2>
-				<p>There are more than 100 fruit and vegetable centers across the nation.  </p>
+				<h2>GREENHOUSE GAS EMISSION</h2>
+				<p>According to Dewan Nasional Perubahan Iklim (DNPI), up to 30% greenhouse gases emission came from agricultural sector and food production, including the process of importing food..  </p>
 			</div>
 			<!-- /.overlay -->
 		</li>
@@ -181,19 +197,20 @@
 </section>
 <!-- /#facts -->
 
-<section id="instagram">
+<section data-bg-color="red" data-nav-name="#ayoeatlocal" class="nav-able" id="instagram">
 	<header>
 		<h1>#AYOEATLOCAL</h1>
 		<p>Join and support the movement by upload your instagram pictures using <a target="_blank" href="http://instagram.com/">#ayoeatlocal</a></p>
 	</header>
 	<div class="container">	
+		<div class="loading">
+			<div class="spinner"></div>
+			<!-- /.spinner -->
+			<br>
+			<span>Retrieving Instagram Photo's</span>
+		</div>
+		<!-- /.loading -->
 		<div class="instagram-posts clearfix">
-			<?php for ($i=0; $i < 9; $i++): ?>
-				<a href="#">
-					<img src="/images/instagram-post.jpg" alt="">
-				</a>
-			<?php endfor; ?>
-
 		</div>
 		<!-- /.instagram-posts -->
 		<div class="load-more-wrap">
@@ -205,17 +222,17 @@
 </section>
 <!-- /#instagram -->
 
-<section id="agritektur">
+<section data-nav-name="about" class="nav-able" id="agritektur">
 	<div class="container">
 		<div class="reference">
 			<a href="#" class="agritektur-logo">
 				<img src="/images/agritektur-logo.png" alt="Agritektur Logo">
 			</a>
 			<ul class="social-media">
-				<li><a href="#"><i class="icon-tumblr"></i></a></li>
-				<li><a href="#"><i class="icon-tumblr"></i></a></li>
-				<li><a href="#"><i class="icon-tumblr"></i></a></li>
-				<li><a href="#"><i class="icon-tumblr"></i></a></li>
+				<li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+				<li class="instagram"><a href="#"><i class="icon-instagram"></i></a></li>
+				<li class="facebook"><a href="#"><i class="icon-facebook"></i></a></li>
+				<li class="tumblr"><a href="#"><i class="icon-tumblr"></i></a></li>
 			</ul>
 			<!-- /.social-media -->
 		</div>
@@ -236,6 +253,9 @@
 <div class="copyright-bar">
 	<div class="container">
 		<p>Agritektur &copy; 2014. All rights reserved</p>
+		<a href="#intro" class="back-to-top anchor">
+			back to top <i class="icon-arrow-small-up"></i>
+		</a>
 	</div>
 	<!-- /.container -->
 </div>
@@ -249,7 +269,11 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/skrollr/src/skrollr.js"></script>
 <script src="bower_components/jquery-waypoints/waypoints.js"></script>
+<script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
 <!-- endbower -->
+<script src="js/main.js"></script>
+
 
 
 </body>

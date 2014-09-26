@@ -14,10 +14,10 @@ module.exports = (grunt) ->
     php:
       dist:
         options:
-          port: 8000
+          port: 8080
           open: false
           keepalive: false
-          hostname: '0.0.0.0'
+          # hostname: '0.0.0.0'
       watch: {}
 
 
@@ -50,7 +50,7 @@ module.exports = (grunt) ->
           join: true
           bare: true
         files:
-          'js/bundle.js': ['client/scripts/**/*.js', 'coffee/**/*.coffee']
+          'js/main.js': ['coffee/**/*.coffee']
 
 
 
@@ -60,9 +60,8 @@ module.exports = (grunt) ->
         bsFiles:
           src : [ 'css/*.css', "**/*.php", "js/*.js"]
         options:
-          proxy: "0.0.0.0"
+          proxy: '0.0.0.0:8080'          
           watchTask: true # < VERY important
-          port: 8000
 
 
     # imageoptimization

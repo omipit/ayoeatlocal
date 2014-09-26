@@ -1,6 +1,3 @@
-@charset "UTF-8";
-
-
 /* =Imports
 -------------------------------------------------------------- */
 // third party imports
@@ -10,30 +7,30 @@
 @import "breakpoint";
 
 
-@import "compass/utilities/sprites";
+// @import "compass/utilities/sprites";
 
 
-@font-face{
-	font-family:'SamsungIFRg';
-	src:font-url("SamsungIF_Rg.eot");
-	src:font-url("SamsungIF_Rg.eot?#iefix") format("embedded-opentype"),
-	font-url("SamsungIF_Rg.woff") format("woff"),
-	font-url("SamsungIF_Rg.ttf") format("truetype"),
-	font-url("SamsungIF_Rg.svg#SamsungIF_Rg") format("svg");
-	font-weight:normal;
-	font-style:normal;
-}
+// @font-face{
+// 	font-family:'SamsungIFRg';
+// 	src:font-url("SamsungIF_Rg.eot");
+// 	src:font-url("SamsungIF_Rg.eot?#iefix") format("embedded-opentype"),
+// 	font-url("SamsungIF_Rg.woff") format("woff"),
+// 	font-url("SamsungIF_Rg.ttf") format("truetype"),
+// 	font-url("SamsungIF_Rg.svg#SamsungIF_Rg") format("svg");
+// 	font-weight:normal;
+// 	font-style:normal;
+// }
 
-@font-face{
-	font-family:'SamsungIFRg';
-	src:font-url("SamsungIF_Bd.eot");
-	src:font-url("SamsungIF_Bd.eot?#iefix") format("embedded-opentype"),
-	font-url("SamsungIF_Bd.woff") format("woff"),
-	font-url("SamsungIF_Bd.ttf") format("truetype"),
-	font-url("SamsungIF_Bd.svg#SamsungIF_Bd") format("svg");
-	font-weight:bold;
-	font-style:normal;
-}
+// @font-face{
+// 	font-family:'SamsungIFRg';
+// 	src:font-url("SamsungIF_Bd.eot");
+// 	src:font-url("SamsungIF_Bd.eot?#iefix") format("embedded-opentype"),
+// 	font-url("SamsungIF_Bd.woff") format("woff"),
+// 	font-url("SamsungIF_Bd.ttf") format("truetype"),
+// 	font-url("SamsungIF_Bd.svg#SamsungIF_Bd") format("svg");
+// 	font-weight:bold;
+// 	font-style:normal;
+// }
 
 
 
@@ -64,6 +61,23 @@ $eatlocal-desktop: (
   container-position: center,
   columns: 12,
   gutters: 1/3,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: rgba(#66f, .15),
+    output: overlay,
+    toggle: top right,
+  )
+);
+
+$eatlocal-mobile: (
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: 95%,
+  container-position: center,
+  columns: 6,
+  gutters: 1/5,
   global-box-sizing: border-box,
   debug: (
     image: show,
@@ -142,6 +156,9 @@ body {
 .container  {
 	// max-width: 1024px;
 	@include container($eatlocal-desktop);
+	@include breakpoint($mobile){
+		@include container($eatlocal-mobile);
+	}
 	min-width: 320px;
 }
 
@@ -194,6 +211,40 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
+/* =General
+-------------------------------------------------------------- */
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  margin: 5px auto 0 auto;
+  background-color: white;
+	display: inline-block;
+  border-radius: 100%;  
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+  background-color: $red;
+}
+
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0.1;
+  }
+}
+
+@keyframes scaleout {
+  0% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0.1;
+  }
+}
+
 
 
 /* =Navigation
@@ -204,10 +255,49 @@ h1, h2, h3, h4, h5, h6 {
 	right: 25px;
 	top: 35%;
 	z-index: 99;
+	@include breakpoint($mobile){
+		display: none;
+	}
+	.label {
+		@include translate3d(0,0,0);
+		background-color: $white;
+		display: inline-block;
+		text-align: center;
+		width: 90px;
+		margin-right: 16px;
+		font-size: 11px;
+		height: 18px;
+		line-height: 18px;
+		text-transform: uppercase;
+		position: absolute;
+		right: 15px;
+		@include box-shadow(0 0 2px rgba(black, 0.4));
+		z-index: 3;
+		&:after, &:before {
+			content: " ";
+			position: absolute;
+			width: 0; 
+			height: 0;
+			border: 9px solid transparent;
+			border-left-color: $white;
+			background-color: transparent;
+			top: 0;
+			right: -18px;
+			z-index: 2
+		}
+		&:before {
+			right: -20px;
+			top: -1px;
+			z-index: 1;
+			border: 10px solid transparent;			
+			border-left-color: rgba(black, 0.2);			
+		}
+	}
 	a {
 		display: block;
 		clear: both;
-		@include margin-trailer(0.5);
+		// @include padding-leader(0.3);
+		@include padding-trailer(0.2);
 		.dot {
 			width: 10px;
 			height: 10px;
@@ -216,30 +306,72 @@ h1, h2, h3, h4, h5, h6 {
 			display: inline-block;
 			vertical-align: middle;
 		}
-		.label {
-			background-color: $white;
-			display: inline-block;
-			text-align: center;
-			width: 80px;
-			margin-right: 16px;
-			font-size: 11px;
-			height: 18px;
-			line-height: 18px;
-			text-transform: uppercase;
-			position: relative;
-			&:after {
-				content: " ";
-				position: absolute;
-				width: 0; 
-				height: 0;
-				border: 9px solid transparent;
-				border-left-color: $white;
-				background-color: transparent;
-				top: 0;
-				right: -18px;
-			}
+
+	}
+
+	// colors 
+	&.red {
+		.label, {
+			background-color: $red;
+			color: $white;
+		}
+		.label:after {
+			border-left-color: $red;
+		}
+		.dot {
+			background-color: $red;
 		}
 	}
+	&.yellow {
+		.label, {
+			background-color: $yellow;
+			// color: $white;
+		}
+		.label:after {
+			border-left-color: $yellow;
+		}
+		.dot {
+			background-color: #FCB52E;
+		}
+	}
+	&.black {
+		.label, {
+			background-color: $yellow;
+			// color: $white;
+		}
+		.label:after {
+			border-left-color: $yellow;
+		}
+		.dot {
+			background-color: $black;
+		}
+	}
+}
+
+@include keyframes(introduction) {
+  0% {
+      opacity:0;
+  }
+  6% {
+      opacity:1;
+  }
+  24% {
+      opacity:1;
+  }
+  30% {
+      opacity:0;
+  }
+  100% {
+      opacity:0;
+  }
+}
+@include keyframes(last-introduction) {
+  0% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
 }
 
 
@@ -249,15 +381,63 @@ h1, h2, h3, h4, h5, h6 {
 #intro {
 	height: 100%;
 	width: 100%;
-	@include background-image(image-url('cover.jpg'));
-	@include background-size(cover);
+	min-height: 570px;
+	background-color: #FFF;
 	position: relative;
-	.logo {
+	overflow: hidden;
+	.intro-slide {
 		position: absolute;
 		top: 36%;
-		width: 100%;
-		left: 0;
+		width: 600px;
+		margin-left: -300px;
+		left: 50%;		
+		@include breakpoint($mobile){
+			width: 80%;
+			left: 10%;
+			margin-left: auto;
+		}
 		text-align: center;
+		z-index: 2;
+		h1 {
+			color: #fffdf2;
+			@include text-shadow(0 0 3px rgba(black, 0.4));
+			text-transform: uppercase;
+			@include adjust-font-size-to(36px);
+
+			@include breakpoint($mobile){
+				@include adjust-font-size-to(29px);
+			}
+		}
+		.introduce {
+			position: absolute;
+			width: 100%;
+			@include animation-duration(9.0s);
+			@include animation-timing-function(linear);
+			// @include animation-iteration-count(1);
+			// @include animation-direction(normal);
+			@include animation-delay(0);
+			// @include animation-play-state(running);
+			@include animation-fill-mode(forwards);
+			@include opacity(0);
+			vertical-align: middle;
+			&:nth-of-type(1) {
+				// @include opacity(1);
+				// @include animation-delay(3s);
+				@include animation-name(introduction);
+			}
+			&:nth-of-type(2) {
+				// @include opacity(1);
+				@include animation-delay(3s);
+				@include animation-name( introduction);
+			}
+			&:nth-of-type(3) {
+				@include animation-name(last-introduction);
+				@include animation-delay(6s);
+				@include animation-duration(3.0s);				
+				// @include opacity(1);
+			}
+		}
+
 		img {
 			display: inline-block;
 		}
@@ -271,44 +451,89 @@ h1, h2, h3, h4, h5, h6 {
 		color: white;
 		font-size: 42px;
 		@include padding-trailer(2);
+		z-index: 2;
+	}
+	.bg-image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top:0;
+		overflow: hidden;
+		.image {
+			width: 100%;
+			height: 100%;
+			@include background-size(cover);
+			@include breakpoint($desktop){			
+				&.cover {
+					@include background-image(image-url('cover.jpg'));
+				}
+				&.cover-2 {
+					@include background-image(image-url('cover-2.jpg'));
+				}
+				&.cover-3 {
+					@include background-image(image-url('cover-3.jpg'));
+				}
+			}
+			@include breakpoint($mobile){
+				&.cover {
+					@include background-image(image-url('cover-mobile.jpg'));
+				}
+				&.cover-2 {
+					@include background-image(image-url('cover-2-mobile.jpg'));
+				}
+				&.cover-3 {
+					@include background-image(image-url('cover-3-mobile.jpg'));
+				}
+			}
+		}
 	}
 }
 
 #about {
 	text-align: center;
-	@include padding-leader(6);
-	@include padding-trailer(4);
+	@include padding-leader(3);
 	position: relative;
-	height: 70%;
-	min-height: 450px;
-	&:after {
-		content: "";
-		position: absolute;
-		right: 0;
-		top: 0;
-		@include background-image(image-url('about-right.png'));
-		@include background-size(contain);
-		background-repeat: no-repeat;
-		background-position: top right;
-		width: 332px;
-		height: 140%;
+	@include breakpoint($mobile){
+		@include padding-leader(5);		
 	}
-	&:before {
-		content: "";
+	.bg-image {
+		@include breakpoint($desktop){			
+			@include background-image(image-url('assets-1.png'));
+			@include background-size(100% 100%);
+
+		}
+		@include breakpoint($mobile){			
+			@include background-image(image-url('mobile-bg.jpg'));
+			@include background-size(100% auto);
+			@include opacity(0.7);
+
+		}
+
+		background-repeat: no-repeat;		
+		background-position: top center;		
 		position: absolute;
 		left: 0;
 		top: 0;
-		@include background-image(image-url('about-left.png'));
-		@include background-size(contain);
-		background-repeat: no-repeat;		
-		width: 332px;
-		height: 140%;
+		width: 100%;
+		height: 110%;
+		@include breakpoint($mobile){
+			height: 100%;
+		}
+		z-index: 1;
+	}
+	.container {
+		position: relative;
+		z-index: 2;
 	}
 
 	.warning {
 		width: span(6);
 		margin: 0 auto;
 		color: $red;
+		@include breakpoint($mobile){
+			width: span(10);			
+		}
 		h1 {
 			@include margin-leader(1);
 			@include adjust-font-size-to(30px, 1.5);
@@ -316,41 +541,70 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 	.explanation {
-		@include margin-leader(4);
+		@include margin-leader(3);
 		width: span(8);
+		@include breakpoint($mobile){
+			width: span(10);			
+		}
 		margin-left: auto;
 		margin-right: auto;
 		color: $green;
 	}
+
+	.solution {
+		@include padding-leader(3);
+		@include padding-trailer(4);
+		width: span(6);
+		@include breakpoint($mobile){
+			width: span(10);	
+			@include padding-trailer(1);		
+		}
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color: $green;
+		// background-color: #F9F7EC;
+
+	}
 }
 
 #solution {
-	text-align: center;
-	color: $green;
-	background-color: #F9F7EC;
-	@include padding-leader(2);
-	@include padding-trailer(2);
+
 	height: 40%;
 	min-height: 400px;
-
-	.solution {
-		width: span(6);
-		margin-left: auto;
-		margin-right: auto;
-	}
 
 }
 
 #event {
-	height: 65%;
-	min-height: 700px;
-	@include padding-leader(2);
-	@include padding-trailer(1);
+	@include padding-leader(12);
+	@include padding-trailer(16);
+	@include breakpoint($mobile){
+		@include padding-leader(2);
+		@include padding-trailer(6);
+
+	}
 	text-align: center;
-	@include background-image(image-url('event-bg.jpg'));
 	@include background-size(cover);
-	background-position: center center;
+	background-repeat: repeat-y;
 	// background-attachment: fixed;
+	position: relative;
+
+	.bg-image {
+		@include background-image(image-url('event-bg.jpg'));		
+		@include background-size(cover);
+		background-repeat: no-repeat;		
+		background-position: top center;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+	.container {
+		position: relative;
+		z-index: 1;
+	}
 
 	h2.section-title {
 		color: $green;
@@ -419,16 +673,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #facts {
-	height: 60%;
+	@include breakpoint($desktop){
+		height: 65%;
+		min-height: 600px;
+	}
 	width: 100%;
-	min-height: 400px;
 	ul {
 		height: 100%;
 	}
 	li {
-		height: 100%;
 		display: block;
-		@include span(1 no-gutter of 4);
+		@include breakpoint($desktop){
+			@include span(1 no-gutter of 4);
+			height: 100%;
+		}
+		@include breakpoint($mobile){
+			@include full;
+			height: 400px;
+			width: 100%;
+			padding: 0;
+		}
 		@include background-size(cover);
 		background-repeat: no-repeat;
 		text-align: center;
@@ -441,24 +705,34 @@ h1, h2, h3, h4, h5, h6 {
 		.overlay {
 			height: 100%;
 			width: 100%;
-			background-color: rgba(black, 0.9);
+			background-color: rgba(#474747, 0.95);
 			color: white;
 			position: relative;
 			padding-left: 30px;
 			padding-right: 30px;
-			@include opacity(0);
+			@include breakpoint($desktop){
+				@include opacity(0);
+			}
+			@include breakpoint($mobile){
+				@include opacity(0.7);
+			}
 			@include transition-duration(0.5s);
 			h2 {
 				@include padding-leader(4);
 				@include adjust-font-size-to(24px,1.5);
+				@include breakpoint($mobile){
+					@include margin-trailer(1);
+				}
 			}
 			p {
-				position: absolute;
-				top: 40%;
-				left: 0;	
-				padding-left: 30px;
-				padding-right: 30px;
-				width: 100%;	
+				@include breakpoint($desktop){
+					position: absolute;
+					top: 40%;
+					left: 0;	
+					padding-left: 30px;
+					padding-right: 30px;
+					width: 100%;	
+				}
 			}
 
 			.disclaimer {
@@ -475,6 +749,9 @@ h1, h2, h3, h4, h5, h6 {
 		&.variety {
 			@include background-image(image-url('variety.jpg'));
 		}
+		&.green-house {
+			@include background-image(image-url('green-house.jpg'));
+		}
 		&.desert {
 			@include background-image(image-url('desert.jpg'));
 		}
@@ -487,11 +764,36 @@ h1, h2, h3, h4, h5, h6 {
 #instagram {
 	@include padding-leader(4);
 	@include padding-trailer(3);
-	@include background-image(image-url('insta-bg.jpg'));
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: bottom left;
-	@include background-size(400px, 487px);
+	background-color: #FFFFFF;
+	position: relative;
+
+	&:after {
+		position: absolute;
+		z-index: 0;
+		@include background-image(image-url('insta-bg.jpg'));
+
+		@include breakpoint($desktop){
+			background-attachment: fixed;
+			@include background-size(400px, 487px);
+
+		}
+		@include breakpoint($mobile){
+			@include background-size(contain);			
+		}
+		background-position: bottom left;
+		background-repeat: no-repeat;
+		content: "";
+		width: 100%;
+		height: 100%;
+		left: 0;
+		bottom: 0;
+		z-index: 0;
+
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+	}
 
 	header {
 		text-align: center;
@@ -504,16 +806,69 @@ h1, h2, h3, h4, h5, h6 {
 			color: $red;
 		}
 	}
+	.loading {
+		text-align: center;
+		@include padding-leader(2);
+		position: absolute;
+		top: 40%;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		span {
+			color: rgba($red, 0.8);
+			font-size: 13px;
+			font-weight: normal;
+		}
+	}
 
 	.instagram-posts {
 		@include margin-leader(3);
-		@include squish(1,1);
+		@include breakpoint($desktop){
+			@include squish(1,1);
+		}
 		@include break;
 		a {
-			@include gallery(1 of 3);
+			@include breakpoint($desktop){
+				@include gallery(1 of 3);
+			}
+			@include breakpoint($mobile){
+				@include gallery(1 inside of 2);
+			}
 			@include margin-trailer(0.5);
+			position: relative;
+			display: block;
+			text-align: center;
+			&:hover .overlay {
+				@include opacity(1);				
+			}
+
+			.wrap {
+				position: relative;
+			}
+			.overlay {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(#e04f27, 0.9);
+				color: white;
+				@include opacity(0);
+				@include transition-duration(0.3s);
+			}
+			i {
+				display: inline-block;
+				display: inline-block;
+				font-size: 29px;
+				margin-top: 38%;
+			}
+			.username {
+				display: block;
+				text-transform: uppercase;
+			}
 			img {
 				width: 100%;
+				display: block;
 			}
 		}
 	}
@@ -521,6 +876,11 @@ h1, h2, h3, h4, h5, h6 {
 		@include break;
 		text-align: center;
 		@include margin-leader(2);
+		// @include opacity(0);
+		.button {
+			display: inline-block;
+			display: none;
+		}
 	}
 }
 
@@ -536,28 +896,73 @@ h1, h2, h3, h4, h5, h6 {
 
 #agritektur {
 	background-color: $yellow;
-	height: 30%;
 	@include padding-leader(2);
+	@include padding-trailer(2);
+
+	// @include breakpoint($desktop){
+	// 	height: 30%;
+	// }
 	.reference {
-		@include pre(2);
-		@include span(first 2);
+		@include breakpoint($desktop){
+			@include pre(2);
+			@include span(first 2);
+		}
+		@include breakpoint($mobile){
+			@include full;
+			text-align: center;
+		}
 	}
 	.social-media {
+		text-align: center;
+
 		li {
 			display: inline-block;
+			margin: 4px 4px;
+			&:hover {
+				a {
+					color: white;
+					border-color: white;
+				}
+				&.twitter a {
+					background-color: #3ED2ED;
+				}
+				&.instagram a {
+					background-color: #4B799F;
+				}
+				&.facebook a {
+					background-color: #3B5998;
+				}
+				&.tumblr a {
+					background-color: #32506C;
+				}
+				
+			}
 			a {
 				@include border-radius(100%);
-				width: 20px;
-				height: 20px;
-				border: 1px solid #201E17;
+				width: 25px;
+				height: 25px;
+				line-height: 26px;
+				border: 2px solid #201E17;
 				display: inline-block;
+				i {
+					font-size: 14px;
+				}
 			}
 		}
 	}
 
 	.about-agritektur {
-		@include span(5);
-		@include pre(1);
+		@include breakpoint($desktop){
+			@include span(5);
+			@include pre(1);
+		}
+		@include breakpoint($mobile){
+			@include full;
+			@include margin-trailer(2);
+			@include margin-leader(1);
+			text-align: center;
+
+		}
 	}
 }
 
@@ -566,4 +971,27 @@ h1, h2, h3, h4, h5, h6 {
 	@include padding-trailer(1);
 	@include padding-leader(1);
 	color: white;
+	@include breakpoint($mobile){
+		text-align: center;
+	}
+	p {
+		float: left;
+		@include breakpoint($mobile){
+			float: none;
+		}
+	}
+	.back-to-top {
+		float: right;
+		text-align: right;
+		color: white;
+		i {
+			font-size: 18px;
+			position: relative;
+			top: 5px;
+		}
+		@include breakpoint($mobile){
+			float: none;
+			text-align: center;
+		}
+	}
 }
