@@ -985,7 +985,8 @@ h1, h2, h3, h4, h5, h6 {
 				width: span(1 of 2);
 				float: left;
 				padding: 10px;
-				max-height: 260px;
+				max-height: 300px;
+				max-width: 300px;
 			}
 			@include margin-trailer(0.5);
 			position: relative;
@@ -1023,8 +1024,8 @@ h1, h2, h3, h4, h5, h6 {
 				width: 100%;
 				display: block;
 				@include breakpoint($mobile){
-					max-width: 260px;
-					max-height: 260px;
+					max-width: 300px;
+					max-height: 300px;
 
 				}
 			}
