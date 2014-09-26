@@ -24,7 +24,7 @@
 <section data-nav-name="intro" class="nav-able" id="intro">
 	<div data-0="opacity:1;transform:translate3d(0px,0px,0px);" data-end="opacity:0;transform:translate3d(0px,900px,0px);" class="intro-slide">
 		<div class="introduce">
-			<h1>It’s your choice to either save or destroy the earth while you’re eating</h1>
+			<h1>It’s your choice to either save or destroy the earth</h1>
 		</div>
 		<!-- /.introduce -->
 		<!-- /.introduce -->
