@@ -881,7 +881,10 @@ h1, h2, h3, h4, h5, h6 {
 				@include gallery(1 of 3);
 			}
 			@include breakpoint($mobile){
-				@include gallery(1 inside of 2);
+				// @include gallery(1 of 2);
+				width: span(1 of 2);
+				float: left;
+				padding: 10px;
 			}
 			@include margin-trailer(0.5);
 			position: relative;
