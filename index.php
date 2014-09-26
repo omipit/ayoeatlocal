@@ -10,6 +10,8 @@
 	<link href='http://fonts.googleapis.com/css?family=Cabin:500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script src="js/modernizr-custom.js"></script>
+
 </head>
 
 <body>
