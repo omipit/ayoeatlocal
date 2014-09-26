@@ -202,6 +202,15 @@ html {
 	background-color: #FFFDF4;
 }
 
+#below-fold {
+	@include breakpoint($mobile){
+		@include background-image(image-url('mobile-bg.jpg'));		
+		@include background-size(100% auto);
+		background-repeat: repeat-y;
+		background-position: center top;
+	}
+}
+
 // set max width for device
 body {
 	display: block;
@@ -552,16 +561,43 @@ h1, h2, h3, h4, h5, h6 {
 	@include breakpoint($mobile){
 		@include padding-leader(5);		
 	}
+	@include breakpoint($desktop){
+		&:before {
+			@include background-image(image-url('about-left.png'));
+			@include background-size(contain);
+			content: "";
+			left: 0;
+			top: 0;
+			height: 110%;
+			width: 40%;
+			position: absolute;
+			background-repeat: no-repeat;
+			z-index: 3;
+		}
+		&:after {
+			@include background-image(image-url('about-right.png'));
+			@include background-size(contain);
+			content: "";
+			right: 0;
+			top: 0;
+			height: 110%;
+			background-position: top right;
+			width: 40%;
+			position: absolute;
+			background-repeat: no-repeat;
+			z-index: 3;
+		}
+	}
 	.bg-image {
 		@include breakpoint($desktop){			
-			@include background-image(image-url('assets-1.png'));
+			// @include background-image(image-url('assets-1.png'));
 			@include background-size(100% 100%);
 
 		}
 		@include breakpoint($mobile){			
-			@include background-image(image-url('mobile-bg.jpg'));
+			// @include background-image(image-url('mobile-bg.jpg'));
 			@include background-size(100% auto);
-			@include opacity(0.7);
+			@include opacity(0.9);
 
 		}
 
@@ -587,7 +623,7 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0 auto;
 		color: $red;
 		@include breakpoint($mobile){
-			width: span(10);			
+			width: span(7);			
 		}
 		h1 {
 			@include margin-leader(1);
@@ -599,7 +635,7 @@ h1, h2, h3, h4, h5, h6 {
 		@include margin-leader(3);
 		width: span(8);
 		@include breakpoint($mobile){
-			width: span(10);			
+			width: span(8);			
 		}
 		margin-left: auto;
 		margin-right: auto;
@@ -611,7 +647,7 @@ h1, h2, h3, h4, h5, h6 {
 		@include padding-trailer(4);
 		width: span(6);
 		@include breakpoint($mobile){
-			width: span(10);	
+			width: span(8);	
 			@include padding-trailer(1);		
 		}
 		margin-left: auto;
@@ -629,9 +665,8 @@ h1, h2, h3, h4, h5, h6 {
 	@include padding-leader(12);
 	@include padding-trailer(16);
 	@include breakpoint($mobile){
-		@include padding-leader(2);
-		@include padding-trailer(6);
-
+		@include padding-leader(3);
+		@include padding-trailer(9);
 	}
 	text-align: center;
 	@include background-size(cover);
@@ -640,10 +675,18 @@ h1, h2, h3, h4, h5, h6 {
 	position: relative;
 
 	.bg-image {
-		@include background-image(image-url('event-bg.jpg'));		
-		@include background-size(cover);
+		@include breakpoint($desktop){
+			@include background-image(image-url('event-bg.jpg'));		
+			@include background-size(cover);
+			background-position: top center;
+
+		}
+		@include breakpoint($mobile){
+			// @include background-image(image-url('mobile-bg.jpg'));		
+			@include background-size(cover);
+			background-position: center -160%;
+		}
 		background-repeat: no-repeat;		
-		background-position: top center;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -718,6 +761,12 @@ h1, h2, h3, h4, h5, h6 {
 		@include margin-leader(2);
 		color: $green;
 		font-weight: 600;
+		@include breakpoint($mobile){
+			width: span(8);
+			margin-left: auto;
+			margin-right: auto;
+
+		}
 	}
 
 }

@@ -51,6 +51,8 @@
 </section>
 <!-- /#intro -->
 
+<main id="below-fold">
+
 <section data-bg-color="red" data-nav-name="the problem" class="nav-able" id="about">
 	<div class="container">
 		<div class="warning">
@@ -253,6 +255,8 @@
 	<!-- /.container -->
 </section>
 <!-- /#agritektur -->
+
+</main>
 
 <div class="copyright-bar">
 	<div class="container">
