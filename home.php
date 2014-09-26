@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=320, initial-scale=0.9, maximum-scale=0.9" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<title>Eat Local - Ayo eat local and save the planet!</title>
-	<link href="https://fontastic.s3.amazonaws.com/hY3cUiBwbtte7Earm4A8p7/icons.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Cabin:500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
@@ -265,10 +265,10 @@
 
 
 <!-- bower:js -->
-<script src="bower_components/modernizr/modernizr.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/skrollr/src/skrollr.js"></script>
-<script src="bower_components/jquery-waypoints/waypoints.js"></script>
+<!-- <script src="bower_components/modernizr/modernizr.js"></script> -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/skrollr/dist/skrollr.min.js"></script>
+<script src="bower_components/jquery-waypoints/waypoints.min.js"></script>
 <script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
 
 <!-- endbower -->

@@ -1,5 +1,5 @@
 $ ->
-  console.log "on"
+  # console.log "on"
   
   if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent or navigator.vendor or window.opera))
     skrollr.init
@@ -65,7 +65,7 @@ $ ->
       $("#main-nav .label").stop(true).animate('top': "#{labelOffset}px", 500).text(labelTxt)
 
       # check if white-bg 
-      console.log elem.attr('data-bg-color')
+      # console.log elem.attr('data-bg-color')
       if elem.attr('data-bg-color')?
           bgClass = elem.attr('data-bg-color')
           $('#main-nav').removeClass()          
@@ -93,7 +93,7 @@ $ ->
 
   instagramUrl = ""
   fetchInsta = (url) ->
-    console.log url
+    # console.log url
     fetching_user_photos = $.ajax
       dataType : "jsonp"
       url : url
@@ -101,7 +101,7 @@ $ ->
         $("#instagram").find('.loading').remove()
         # console.log "finished getting pictures..."
         # Iterate over found instagram item in data
-        console.log data
+        # console.log data
         instagramUrl = data.pagination.next_url ? ""
         $.each(data.data, (i, item) ->
           thumbnail = item.images.thumbnail.url
@@ -114,7 +114,7 @@ $ ->
           videoIcon = ""
           videoHtml = ""
           user = item.user.username
-          console.log item
+          # console.log item
           # append images and
           $("<a target='_blank' href='#{link}' data-full-image='#{full_image}' class='insta-thumb #{videoClass}'>
             <div class='wrap'>

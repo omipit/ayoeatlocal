@@ -1,6 +1,5 @@
 $(function() {
   var adjustSliderImageSize, changeNav, fetchInsta, instaPosts, instaTag, instagramUrl, recentMediaUrl;
-  console.log("on");
   if (!/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent || navigator.vendor || window.opera)) {
     skrollr.init({
       forceHeight: false
@@ -64,7 +63,6 @@ $(function() {
     $("#main-nav .label").stop(true).animate({
       'top': "" + labelOffset + "px"
     }, 500).text(labelTxt);
-    console.log(elem.attr('data-bg-color'));
     if (elem.attr('data-bg-color') != null) {
       bgClass = elem.attr('data-bg-color');
       $('#main-nav').removeClass();
@@ -95,14 +93,12 @@ $(function() {
   instagramUrl = "";
   fetchInsta = function(url) {
     var fetching_user_photos;
-    console.log(url);
     return fetching_user_photos = $.ajax({
       dataType: "jsonp",
       url: url,
       success: function(data) {
         var _ref;
         $("#instagram").find('.loading').remove();
-        console.log(data);
         instagramUrl = (_ref = data.pagination.next_url) != null ? _ref : "";
         $.each(data.data, function(i, item) {
           var full_image, link, thumbnail, thumbnail_height, thumbnail_width, user, videoAttr, videoClass, videoHtml, videoIcon;
@@ -116,7 +112,6 @@ $(function() {
           videoIcon = "";
           videoHtml = "";
           user = item.user.username;
-          console.log(item);
           return $("<a target='_blank' href='" + link + "' data-full-image='" + full_image + "' class='insta-thumb " + videoClass + "'> <div class='wrap'> <div class='overlay'> <i class='icon-instagram'></i> <span class='username'>" + user + "</span> </div> <img width='100%' height='100%' src='" + thumbnail + "'/> </div></a>").appendTo('.instagram-posts').hide().delay(400 * i).fadeIn(400);
         });
         if (instagramUrl !== "") {
