@@ -245,7 +245,7 @@
 			<p>
 				Agritektur is a community of creative people who are passionate about Indonesian agriculture.
 
-				We care about our local food, we care about the impact of importing food, and even we care about our local farmers, because in Agritektur we believe that paying more attention to how far our food have traveled means doing something for better world.
+				We care about our local food, we care about the impact of importing food and we care about our local farmers, because in Agritektur we believe that paying more attention to how far our food have traveled means doing something for better world.
 			</p>
 		</div>
 		<!-- /.about-agritektur -->
