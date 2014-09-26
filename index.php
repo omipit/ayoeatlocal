@@ -116,7 +116,7 @@
 		<div class="right-date">
 			<div class="text">
 				<h1 class="day">
-					Saturday
+					SATURDAY
 				</h1>
 				<!-- /.day -->
 				<div class="date">
