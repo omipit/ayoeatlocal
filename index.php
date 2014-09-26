@@ -229,14 +229,14 @@
 <section data-nav-name="about" class="nav-able" id="agritektur">
 	<div class="container">
 		<div class="reference">
-			<a href="#" class="agritektur-logo">
+			<a target="_blank" href="http://instagram.com/agritektur" class="agritektur-logo">
 				<img src="/images/agritektur-logo.png" alt="Agritektur Logo">
 			</a>
 			<ul class="social-media">
-				<li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
-				<li class="instagram"><a href="#"><i class="icon-instagram"></i></a></li>
-				<li class="facebook"><a href="#"><i class="icon-facebook"></i></a></li>
-				<li class="tumblr"><a href="#"><i class="icon-tumblr"></i></a></li>
+				<li class="twitter"><a target="_blank" href="https://twitter.com/AGRITEKTUR"><i class="icon-twitter"></i></a></li>
+				<li class="instagram"><a target="_blank" href="http://instagram.com/agritektur"><i class="icon-instagram"></i></a></li>
+				<li class="facebook"><a target="_blank" href="https://id-id.facebook.com/agritekturindonesia"><i class="icon-facebook"></i></a></li>
+				<li class="tumblr"><a target="_blank" href="http://agritektur.tumblr.com/"><i class="icon-tumblr"></i></a></li>
 			</ul>
 			<!-- /.social-media -->
 		</div>
