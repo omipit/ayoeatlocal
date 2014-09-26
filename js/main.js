@@ -112,7 +112,7 @@ $(function() {
           videoIcon = "";
           videoHtml = "";
           user = item.user.username;
-          return $("<a target='_blank' href='" + link + "' data-full-image='" + full_image + "' class='insta-thumb " + videoClass + "'> <div class='wrap'> <div class='overlay'> <i class='icon-instagram'></i> <span class='username'>" + user + "</span> </div> <img width='100%' height='100%' src='" + thumbnail + "'/> </div></a>").appendTo('.instagram-posts').hide().delay(400 * i).fadeIn(400);
+          return $("<a target='_blank' href='" + link + "' data-full-image='" + full_image + "' class='insta-thumb " + videoClass + "'> <div class='wrap'> <div class='overlay'> <i class='icon-instagram'></i> <span class='username'>" + user + "</span> </div> <img width='100%' src='" + thumbnail + "'/> </div></a>").appendTo('.instagram-posts').hide().delay(400 * i).fadeIn(400);
         });
         if (instagramUrl !== "") {
           return $(".load-more-wrap .button").show(400);

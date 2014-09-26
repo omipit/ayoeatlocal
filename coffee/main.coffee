@@ -122,7 +122,7 @@ $ ->
                 <i class='icon-instagram'></i>
                   <span class='username'>#{user}</span>
               </div>
-              <img width='100%' height='100%' src='#{thumbnail}'/>
+              <img width='100%' src='#{thumbnail}'/>
               </div></a>").appendTo('.instagram-posts').hide().delay(400*i).fadeIn(400)
           )
 
