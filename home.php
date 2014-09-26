@@ -175,8 +175,13 @@
 		</li>
 		<li class="desert">
 			<div class="overlay">
-				<h2>DESSERT FOR PRESIDENT</h2>
-				<p>Mangga Gedong Gincu is one of the favorite fruit  in White House for American President.</p>
+				<h2>DELIVERING IMPORTED FOOD</h2>
+				<p>
+					Imports by airplane have bigger effects on global warming pollution. It released thousands tons of CO2. <br><br>
+
+					Can you imagine the emission caused by 14.978.57 km flight from America to Indonesia to delivering imported food?
+
+				</p>
 			</div>
 			<!-- /.overlay -->
 		</li>
