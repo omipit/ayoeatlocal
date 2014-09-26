@@ -177,9 +177,9 @@
 			<div class="overlay">
 				<h2>DELIVERING IMPORTED FOOD</h2>
 				<p>
-					Imports by airplane have bigger effects on global warming pollution. It released thousands tons of CO2. <br><br>
+					Imports by airplane have bigger effects on global warming pollution. It releases thousands tons of CO2. <br><br>
 
-					Can you imagine the emission caused by 14.978.57 km flight from America to Indonesia to delivering imported food?
+					Can you imagine the emission caused by 14.978.57 km flight from America to Indonesia to deliver imported food?
 
 				</p>
 			</div>
