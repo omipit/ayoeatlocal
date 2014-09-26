@@ -30,7 +30,7 @@
 		</div>
 		<!-- /.introduce -->
 		<!-- /.introduce -->
-		<div class="introduce"> 
+		<div class="introduce">
 			<h1>while you’re eating</h1>
 		</div>
 		<!-- /.introduce-2 -->
@@ -71,7 +71,7 @@
 			So what should you do?
 			</p>
 		</div>
-			<!-- /.explanation -->	
+			<!-- /.explanation -->
 		<div class="solution">
 			<div class="logo">
 				<img src="/images/eatlocal-type-logo.png" alt="">
@@ -93,7 +93,7 @@
 <!-- /#about -->
 <section data-bg-color="yellow" data-nav-name="Join Us" class="nav-able" id="event">
 	<div class="container">
-		<h2 class="section-title">Let’s save the world <br> 
+		<h2 class="section-title">Let’s save the world <br>
 		WITH THE MOST DELICIOUS WAY:</h2>
 	<div class="logo">
 		<img src="/images/eatlocal-logo.png" alt="Eatlocal Logo">
@@ -201,7 +201,7 @@
 			<!-- /.overlay -->
 		</li>
 	</ul>
-	
+
 </section>
 <!-- /#facts -->
 
@@ -210,7 +210,7 @@
 		<h1>#AYOEATLOCAL</h1>
 		<p>Join and support the movement by upload your instagram pictures using <a target="_blank" href="http://instagram.com/">#ayoeatlocal</a></p>
 	</header>
-	<div class="container">	
+	<div class="container">
 		<div class="loading">
 			<div class="spinner"></div>
 			<!-- /.spinner -->
