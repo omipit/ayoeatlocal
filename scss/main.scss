@@ -454,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
 		@include animation-timing-function(linear);
 		// @include animation-iteration-count(1);
 		// @include animation-direction(normal);
-		@include animation-delay(0);
+		@include animation-delay(1s);
 		// @include animation-play-state(running);
 		@include animation-fill-mode(forwards);
 		@include opacity(0);
@@ -466,12 +466,12 @@ h1, h2, h3, h4, h5, h6 {
 		}
 		&:nth-of-type(2) {
 			// @include opacity(1);
-			@include animation-delay(3s);
+			@include animation-delay(4s);
 			@include animation-name( introduction);
 		}
 		&:nth-of-type(3) {
 			@include animation-name(last-introduction);
-			@include animation-delay(6s);
+			@include animation-delay(7s);
 			@include animation-duration(3.0s);				
 			// @include opacity(1);
 		}
