@@ -11,6 +11,9 @@
 	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/modernizr-custom.js"></script>
+	<!--[if lt IE 9]>
+		<script src="bower_components/respondJS/dest/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 
@@ -24,7 +27,9 @@
 <!-- /#main-nav -->
 
 <section data-nav-name="intro" class="nav-able" id="intro">
-	<div data-0="opacity:1;transform:translate3d(0px,0px,0px);" data-end="opacity:0;transform:translate3d(0px,900px,0px);" class="intro-slide">
+	<div data-0="opacity:0;" data-top-bottom="opacity:0.5;" class="fade-overlay"></div>
+	<!-- /.fade-overlay -->
+	<div data-0="transform:translate3d(0px,0px,0px);" data-end="transform:translate3d(0px,900px,0px);" class="intro-slide">
 		<div class="introduce">
 			<h1>It’s your choice to either save or destroy the earth</h1>
 		</div>

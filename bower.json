@@ -21,6 +21,7 @@
     "jquery": "~2.1.1",
     "skrollr": "~0.6.26",
     "jquery-waypoints": "~2.0.5",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "respondJS": "~1.4.2"
   }
 }
