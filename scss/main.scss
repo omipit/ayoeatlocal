@@ -209,6 +209,9 @@ html {
 		background-repeat: repeat-y;
 		background-position: center top;
 	}
+	@include breakpoint($desktop){
+		height: 100%;
+	}
 }
 
 // set max width for device

@@ -256,8 +256,6 @@
 </section>
 <!-- /#agritektur -->
 
-</main>
-
 <div class="copyright-bar">
 	<div class="container">
 		<p>Agritektur &copy; 2014. All rights reserved</p>
@@ -268,6 +266,8 @@
 	<!-- /.container -->
 </div>
 <!-- /.copyright-bar -->
+
+</main>
 
 
 
