@@ -200,7 +200,7 @@
 				<p>We have 47.89 million farm workers across the nation* and we still have 25,82 million hectares of suboptimal lands for farming**.</p>
 				<span class="disclaimer">
 					*NationMaster data in 2008 <br>
-					** Agritektur darta in 2014
+					** Agritektur data in 2014
 				</span>
 			</div>
 			<!-- /.overlay -->
@@ -265,7 +265,7 @@
 
 <div class="copyright-bar">
 	<div class="container">
-		<p>Agritektur &copy; 2014. All rights reserved</p>
+		<p>Eatlocal &copy; 2014. All rights reserved</p>
 		<a href="#intro" class="back-to-top anchor">
 			back to top <i class="icon-arrow-small-up"></i>
 		</a>
