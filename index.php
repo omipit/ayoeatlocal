@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="https://www.facebook.com/2008/fbml">
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Content-Language" content="en">
-	<meta name="viewport" content="width=320, initial-scale=0.9, maximum-scale=0.9" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<title>Eat Local - Ayo eat local and save the planet!</title>
-	<link href='http://fonts.googleapis.com/css?family=Cabin:500,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/modernizr-custom.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=320, initial-scale=0.9, maximum-scale=0.9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>Eat Local - Ayo eat local and save the planet!</title>
+
+    <meta name="author" content="Agritektur">
+    <meta name="title" content="Eat Local">
+    <meta name="description" content="Ayo eat local and save the planet!">
+    <meta name="keywords" content="ayo eat local, eat local, eat, local, agritektur">
+
+    <!-- Facebook Meta -->
+    <meta property="og:title" content="Eat Local"/>
+    <meta property="og:url" content="http://ayoeatlocal.com/"/>
+    <meta property="og:image" content="http://ayoeatlocal.com/images/logo-200x200.png"/>
+    <meta property="og:description" content="Ayo eat local and save the planet!"/>
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <link href='http://fonts.googleapis.com/css?family=Cabin:500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/modernizr-custom.js"></script>
+
 	<!--[if lt IE 9]>
 		<script src="bower_components/respondJS/dest/respond.min.js"></script>
 	<![endif]-->
@@ -35,7 +55,7 @@
 		</div>
 		<!-- /.introduce -->
 		<!-- /.introduce -->
-		<div class="introduce"> 
+		<div class="introduce">
 			<h1>while you’re eating</h1>
 		</div>
 		<!-- /.introduce-2 -->
@@ -76,7 +96,7 @@
 			So what should you do?
 			</p>
 		</div>
-			<!-- /.explanation -->	
+			<!-- /.explanation -->
 		<div class="solution">
 			<div class="logo">
 				<img src="/images/eatlocal-type-logo.png" alt="">
@@ -98,7 +118,7 @@
 <!-- /#about -->
 <section data-bg-color="yellow" data-nav-name="Join Us" class="nav-able" id="event">
 	<div class="container">
-		<h2 class="section-title">Let’s save the world <br> 
+		<h2 class="section-title">Let’s save the world <br>
 		WITH THE MOST DELICIOUS WAY:</h2>
 	<div class="logo">
 		<img src="/images/eatlocal-logo.png" alt="Eatlocal Logo">
@@ -206,7 +226,7 @@
 			<!-- /.overlay -->
 		</li>
 	</ul>
-	
+
 </section>
 <!-- /#facts -->
 
@@ -215,7 +235,7 @@
 		<h1>#AYOEATLOCAL</h1>
 		<p>Join and support the movement by upload your instagram pictures using <a target="_blank" href="http://instagram.com/">#ayoeatlocal</a></p>
 	</header>
-	<div class="container">	
+	<div class="container">
 		<div class="loading">
 			<div class="spinner"></div>
 			<!-- /.spinner -->
