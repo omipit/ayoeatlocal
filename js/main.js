@@ -7,6 +7,9 @@ $(function() {
   }
   instaTag = "ayoeatlocal";
   instaPosts = "9";
+  if (Modernizr.mq('only all and (max-width: 875px)')) {
+    instaPosts = "10";
+  }
   recentMediaUrl = "https://api.instagram.com/v1/tags/" + instaTag + "/media/recent?client_id=7ef247949c684b6a9ee95c076e60c53b&count=" + instaPosts;
   $(".owl-carousel").owlCarousel({
     items: 1,

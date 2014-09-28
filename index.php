@@ -134,10 +134,10 @@
 				<div class="date">
 					26 SEPTEMBER 2014
 				</div>
-				<div class="time">
+				<div class="the-time">
 					10.00 AM - 5.00 PM
 				</div>
-				<!-- /.time -->
+				<!-- /.the-time -->
 			</div>
 			<!-- /.text -->
 		</div>
@@ -151,10 +151,10 @@
 				<div class="date">
 					27 SEPTEMBER 2014
 				</div>
-				<div class="time">
+				<div class="the-time">
 					10.00 AM - 2.00 PM
 				</div>
-				<!-- /.time -->
+				<!-- /.the-time -->
 			</div>
 			<!-- /.text -->
 		</div>
