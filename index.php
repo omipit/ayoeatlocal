@@ -50,19 +50,16 @@
 	<div data-0="opacity:0;" data-top-bottom="opacity:0.5;" class="fade-overlay"></div>
 	<!-- /.fade-overlay -->
 	<div data-0="transform:translate3d(0px,0px,0px);" data-end="transform:translate3d(0px,900px,0px);" class="intro-slide">
-		<div class="introduce">
-			<h1>It’s your choice to either save or destroy the earth</h1>
-		</div>
-		<!-- /.introduce -->
-		<!-- /.introduce -->
-		<div class="introduce">
-			<h1>while you’re eating</h1>
-		</div>
-		<!-- /.introduce-2 -->
-		<div class="logo introduce">
+		<div class="logo">
 			<img src="/images/logo-white.png" alt="">
 		</div>
 		<!-- /.logo -->
+		<div class="introduce">
+			<h1>It’s your choice to either save </h1><br>
+			<h1>or destroy the earth</h1><br>
+			<h1 class="last">while you’re eating</h1>
+		</div>
+		<!-- /.introduce -->
 	</div>
 	<!-- /.intro-slide -->
 	<a href="#about" class="go-down anchor">
@@ -116,89 +113,26 @@
 	<!-- /.bg-image -->
 </section>
 <!-- /#about -->
-<section data-bg-color="yellow" data-nav-name="Join Us" class="nav-able" id="event">
-	<div class="container">
-		<h2 class="section-title">Let’s save the world <br>
-		WITH THE MOST DELICIOUS WAY:</h2>
-	<div class="logo">
-		<img src="/images/eatlocal-logo.png" alt="Eatlocal Logo">
-	</div>
-	<!-- /.logo -->
-	<div class="event-date cleafix">
-		<div class="left-date">
-			<div class="text">
-				<h1 class="day">
-					FRIDAY
-				</h1>
-				<!-- /.day -->
-				<div class="date">
-					26 SEPTEMBER 2014
-				</div>
-				<div class="the-time">
-					10.00 AM - 5.00 PM
-				</div>
-				<!-- /.the-time -->
-			</div>
-			<!-- /.text -->
-		</div>
-		<!-- /.left-date -->
-		<div class="right-date">
-			<div class="text">
-				<h1 class="day">
-					SATURDAY
-				</h1>
-				<!-- /.day -->
-				<div class="date">
-					27 SEPTEMBER 2014
-				</div>
-				<div class="the-time">
-					10.00 AM - 2.00 PM
-				</div>
-				<!-- /.the-time -->
-			</div>
-			<!-- /.text -->
-		</div>
-		<!-- /.right-date -->
-	</div>
-	<!-- /.event-date -->
-
-	<div class="event-location">
-		<h2>THE STACKS BURGER</h2>
-		<div class="address">
-			Jalan Taman Kemang I no.6 <br> Kemang, Jakarta
-		</div>
-		<!-- /.address -->
-	</div>
-	<!-- /.event-location -->
-
-	<div class="event-info">
-		PARAPPA (Pasar Para Petani)        MAKAN UDUNAN <br>
-		WORKSHOP : Making Butter &amp; Cupping Coffee by Agritektur <br>
-		RAWCAL by Burgreens Raw Explorers, Max, &amp; Helga
-	</div>
-	<!-- /.event-info -->
-
-	</div>
-	<!-- /.container -->
-	<!-- data-start="transform:translate3d(0px,0px,0px) scale(1.1);" data-end="transform:translate3d(0px, 0px,0px) scale(1.3);" -->
-	<div class="bg-image"></div>
-	<!-- /.bg-image -->
-</section>
-<!-- /#event -->
 
 <section data-bg-color="black" data-nav-name="facts" class="nav-able" id="facts">
 	<ul class="clearfix">
 		<li class="producer">
 			<div class="overlay">
-				<h2>WE ARE THE WORLD’S BIGGEST PRODUCER</h2>
-				<p>We are the world's biggest palm oil producer and one of the biggest producers of coffee bean, tea, cocoa</p>
+				<h2>How Local is Local?</h2>
+				<p>To be classifies as local, food has to be grown within the state or traveled less than 400 miles or approx. 600 km.
+				<br><br>
+				Buy products from our local farmer will get us the freshest, cheaper, and healthier food.
+				</p>
+				<span class="disclaimer">
+					*According to United States of Agricultural Department
+				</span>
 			</div>
 			<!-- /.overlay -->
 		</li>
 		<li class="green-house">
 			<div class="overlay">
 				<h2>GREENHOUSE GAS EMISSION</h2>
-				<p>According to Dewan Nasional Perubahan Iklim (DNPI), up to 30% greenhouse gases emission came from agricultural sector and food production, including the process of importing food..  </p>
+				<p>According to Dewan Nasional Perubahan Iklim (DNPI), up to 30% greenhouse gases emission came from agricultural sector and food production, including the process of importing food.  </p>
 			</div>
 			<!-- /.overlay -->
 		</li>
@@ -230,10 +164,71 @@
 </section>
 <!-- /#facts -->
 
+<section data-bg-color="green" data-nav-name="Thank You!" class="nav-able" id="thank-you">
+	<div class="container">
+	<!-- /.container -->
+		<header>
+			<h1> <img src="images/thank-you/thank-you-heading.png" alt="Thank You For Your Support"> </h1>
+			<div class="desc">
+				<div class="logo">
+					<img width="90" src="images/eatlocal-logo.png" alt="Eat Local Logo">
+				</div>
+				<!-- /.logo -->
+				<p>
+				We are glad to say thank you for participating and attending the Eat Local event. 
+				<br>
+				By participating, you have helped the world, the environment, and supported our local farmers.
+				<br><br>
+				Keep the movement growing by eating local!
+				</p>
+			</div>
+			<!-- /.desc -->
+		</header>
+		<ul class="thanks-gallery">
+			<?php for ($i=1; $i <= 8; $i++): ?>
+				<li class="image">
+					<img src='<?php echo "images/thank-you/thanks-$i.jpg"; ?>' alt="">
+				</li>
+			<?php endfor; ?>
+		</ul>
+		<!-- /.thanks-gallery -->
+	</div>
+
+
+</section>
+<!-- /#thank-you -->
+
+<section data-bg-color="red" data-nav-name="Featured Farmer" class="nav-able" id="featured-farmer">
+	<div class="container">
+	<!-- /.container -->
+		<header>
+			<h1> Featured Farmer</h1>
+		</header>
+		<div class="farmer">
+			<div class="avatar">					
+					<img src="images/featured-farmer/asep.jpg" alt="featured farmer: Asep Kurnia">
+			</div>
+			<!-- /.avatar -->
+			<div class="desc">
+				<p>
+					ASEP KURNIA or Kang Asep, is one of the farmers who joined Eat Local. Born and raised in Ciburial Village Bandung, he continues to work in his family farms after graduated from high school.  Kang Asep is focusing on growing types of herbs in his farm; most of them are popular herbs like rosemary, oregano, stevia, etc and until now he already grows more than 30 types of herbs. <br>
+
+					By supporting Eat Local, Kang Asep wishes he could interact more with consumer in the future and changing information about how important local product to our live is.
+				</p>
+			</div>
+			<!-- /.desc -->
+		</div>
+		<!-- /.farmer -->
+	</div>
+
+
+</section>
+<!-- /#thank-you -->
+
 <section data-bg-color="red" data-nav-name="#ayoeatlocal" class="nav-able" id="instagram">
 	<header>
 		<h1>#AYOEATLOCAL</h1>
-		<p>Join and support the movement by upload your instagram pictures using <a target="_blank" href="http://instagram.com/">#ayoeatlocal</a></p>
+		<p>Join and support the movement by uploading your instagram pictures using <a target="_blank" href="http://instagram.com/">#ayoeatlocal</a></p>
 	</header>
 	<div class="container">
 		<div class="loading">
@@ -259,7 +254,7 @@
 	<div class="container">
 		<div class="reference">
 			<a target="_blank" href="http://instagram.com/agritektur" class="agritektur-logo">
-				<img src="/images/agritektur-logo.png" alt="Agritektur Logo">
+				<img src="/images/agritektur-logo-2.png" alt="Agritektur Logo">
 			</a>
 			<ul class="social-media">
 				<li class="twitter"><a target="_blank" href="https://twitter.com/AGRITEKTUR"><i class="icon-twitter"></i></a></li>
@@ -273,7 +268,7 @@
 		<div class="about-agritektur">
 			<p>
 				Agritektur is a community of creative people who are passionate about Indonesian agriculture.
-
+				<br><br>
 				We care about our local food, we care about the impact of importing food and we care about our local farmers, because in Agritektur we believe that paying more attention to how far our food have traveled means doing something for better world.
 			</p>
 		</div>
