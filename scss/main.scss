@@ -403,31 +403,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-@include keyframes(introduction) {
-  0% {
-      opacity:0;
-  }
-  6% {
-      opacity:1;
-  }
-  24% {
-      opacity:1;
-  }
-  30% {
-      opacity:0;
-  }
-  100% {
-      opacity:0;
-  }
-}
-@include keyframes(last-introduction) {
-  0% {
-      opacity:0;
-  }
-  100% {
-      opacity:1;
-  }
-}
 
 
 /* =Intro
@@ -466,9 +441,9 @@ h1, h2, h3, h4, h5, h6 {
 		width: 100%;
 		left: 0;		
 		@include breakpoint($mobile){
-			width: 80%;
-			left: 10%;
-			top: 30%;
+			width: 100%;
+			left: 0;
+			top: 4%;
 			margin-left: auto;
 		}
 		text-align: center;
@@ -477,15 +452,16 @@ h1, h2, h3, h4, h5, h6 {
 			color: $light-black;
 			text-transform: uppercase;
 			@include adjust-font-size-to(36px);
-			background-color: $white;
-			color: black;
+			background-color: rgba($white, 0.95);
 			display: inline-block;
 			padding: 0 20px;
 			&.last {
 				@include margin-leader(0.5);
 			}
 			@include breakpoint($mobile){
-				@include adjust-font-size-to(29px);
+				@include adjust-font-size-to(29px, 1.75);
+				display: inline;
+				white-space: pre-wrap;
 			}
 		}
 
@@ -625,7 +601,8 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0 auto;
 		color: $red;
 		@include breakpoint($mobile){
-			width: span(7);			
+			@include full;		
+			@include margin-trailer(1);
 		}
 		h1 {
 			@include margin-leader(1);
@@ -637,7 +614,9 @@ h1, h2, h3, h4, h5, h6 {
 		@include margin-leader(3);
 		width: span(8);
 		@include breakpoint($mobile){
-			width: span(8);			
+			width: span(10);			
+			@include margin-leader(0);
+
 		}
 		margin-left: auto;
 		margin-right: auto;
@@ -649,7 +628,7 @@ h1, h2, h3, h4, h5, h6 {
 		@include padding-trailer(4);
 		width: span(6);
 		@include breakpoint($mobile){
-			width: span(8);	
+			width: span(10);	
 			@include padding-trailer(1);		
 		}
 		margin-left: auto;
@@ -819,6 +798,8 @@ h1, h2, h3, h4, h5, h6 {
 			}
 			@include breakpoint($mobile){
 				@include opacity(0.9);
+				background-color: rgba($green, 0.65);
+				@include text-shadow(0 1px 2px rgba(black, 0.4));
 			}
 			@include transition-duration(0.5s);
 			h2 {
@@ -903,13 +884,24 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	header {
 		text-align: center;
+		img {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
 		.desc {
 			width: span(8);
 			margin: 0 auto;
+			@include breakpoint($mobile){
+				@include full;
+			}
 		}
 		.logo {
 			@include margin-leader(2);
 			@include margin-trailer(1);
+			img {
+				margin: 0 auto;
+			}
 		}
 	}
 	.thanks-gallery {
@@ -917,14 +909,18 @@ h1, h2, h3, h4, h5, h6 {
 		@include margin-leader(2);
 		@include margin-trailer(2);
 		.image {
+			img {
+				width: 100%;
+				display: block;
+			}
 			@include breakpoint($desktop){
 				@include gallery(3 of 12);
 				margin-bottom: gutter(12);
-				img {
-					width: 100%;
-					display: block;
-				}
 			}
+			@include breakpoint($mobile){
+				@include gallery(6 of 12);
+				margin-bottom: gutter(12);
+			}			
 		}
 	}
 }
@@ -936,26 +932,48 @@ h1, h2, h3, h4, h5, h6 {
 	@include background-image(image-url('bgs/featured-bg.jpg'));
 	background-repeat: no-repeat;
 	background-position: 0 100%;
+	@include breakpoint($mobile){
+		background-position: -60px 100px;
+		// @include background-size(5%);
+	}
+
 	h1 {
 		text-transform: uppercase;
 		color: $green;
 		@include adjust-font-size-to(28px);
+		@include breakpoint($mobile){
+			text-align: center;
+		}
 	}
 	.farmer {
 		@include margin-leader(1);
 		@include full;
 		@include padding-trailer(4);
+		@include breakpoint($mobile){
+			@include padding-trailer(1);
+		}
 		.avatar {
 			@include span(first 3.5);
+			@include breakpoint($mobile){
+				@include full;
+			}
 			img {
 				display: block;
 				@include border-radius(100%);
+				@include breakpoint($mobile){
+					margin: 0 auto;
+				}
+
 			}
 		}
 		.desc {
 			width: span(8.5);
 			float: left;
 			@include margin-leader(2);
+			@include breakpoint($mobile){
+				@include full;
+			}
+
 		}
 	}
 }
@@ -966,30 +984,18 @@ h1, h2, h3, h4, h5, h6 {
 	@include padding-trailer(3);
 	// background-color: #FFFFFF;
 	position: relative;
-
-	&:after {
-		position: absolute;
-		z-index: 0;
-		@include background-image(image-url('bgs/instagram.jpg'));
-
-		@include breakpoint($desktop){
-			background-attachment: fixed;
-			@include background-size(400px, 487px);
-
-		}
-		@include breakpoint($mobile){
-			@include background-size(contain);			
-		}
-		background-position: bottomv left;
-		background-repeat: no-repeat;
-		content: "";
-		width: 100%;
-		height: 100%;
-		left: 0;
-		bottom: 0;
-		z-index: 0;
+	@include background-image(image-url('bgs/instagram.jpg'));
+	@include breakpoint($desktop){
+		background-attachment: fixed;
+		@include background-size(400px, 487px);
 
 	}
+	@include breakpoint($mobile){
+		@include background-size(400px auto);
+		background-position: left 400px;	
+	}
+	background-position: bottom left;
+	background-repeat: no-repeat;
 	.container {
 		position: relative;
 		z-index: 2;
@@ -997,6 +1003,8 @@ h1, h2, h3, h4, h5, h6 {
 
 	header {
 		text-align: center;
+		position: relative;
+		z-index: 99;
 		h1 {
 			color: $red;
 			@include adjust-font-size-to(32px);
@@ -1032,8 +1040,8 @@ h1, h2, h3, h4, h5, h6 {
 				@include gallery(1 of 3);
 			}
 			@include breakpoint($mobile){
-				// @include gallery(1 of 2);
-				width: span(1 of 2);
+				@include span(6 of no-gutter inside 12);
+				// width: span(1 wide of 2);
 				float: left;
 				padding: 10px;
 				max-height: 300px;
