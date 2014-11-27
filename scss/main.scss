@@ -967,7 +967,8 @@ h1, h2, h3, h4, h5, h6 {
 			}
 		}
 		.desc {
-			width: span(8.5);
+			width: span(8);
+			@include pre(0.5);
 			float: left;
 			@include margin-leader(2);
 			@include breakpoint($mobile){
@@ -981,12 +982,13 @@ h1, h2, h3, h4, h5, h6 {
 #instagram {
 	@include full;
 	@include padding-leader(4);
-	@include padding-trailer(3);
+	@include padding-trailer(2);
 	// background-color: #FFFFFF;
 	position: relative;
 	@include background-image(image-url('bgs/instagram.jpg'));
+	background-position: 0 240px;	
 	@include breakpoint($desktop){
-		background-attachment: fixed;
+		// background-attachment: fixed;
 		@include background-size(400px, 487px);
 
 	}
@@ -994,7 +996,6 @@ h1, h2, h3, h4, h5, h6 {
 		@include background-size(400px auto);
 		background-position: left 400px;	
 	}
-	background-position: bottom left;
 	background-repeat: no-repeat;
 	.container {
 		position: relative;
