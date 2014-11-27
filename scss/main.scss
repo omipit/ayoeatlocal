@@ -1125,9 +1125,13 @@ h1, h2, h3, h4, h5, h6 {
 	// 	height: 30%;
 	// }
 	.reference {
+		img {
+			margin: 0 auto;
+			display: block;
+		}
 		@include breakpoint($desktop){
-			@include pre(1.5);
-			@include span(first 3);
+			@include pre(1);
+			@include span(first 4);
 		}
 		@include breakpoint($mobile){
 			@include full;
@@ -1175,8 +1179,7 @@ h1, h2, h3, h4, h5, h6 {
 
 	.about-agritektur {
 		@include breakpoint($desktop){
-			@include span(5);
-			@include pre(0.5);
+			@include span(5.5);
 		}
 		@include breakpoint($mobile){
 			@include full;
